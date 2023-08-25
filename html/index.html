@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/main.css">
 	<script src="https://kit.fontawesome.com/196310b2bc.js" crossorigin="anonymous"></script>
-    <title>Edrea</title>
+    <title>Sam's Portfolio</title>
 </head>
 <body>
 
@@ -271,20 +271,20 @@
 													<ul class="ml-[-20px]">
 														<li class="mb-[20px] w-1/3 float-left pl-[20px]">
 															<div class="list_inner w-full relative text-center">
-																<div class="myCircle relative float-left" data-value="0.95"></div>
+																<div class="myCircle relative float-left" data-value="1.0"></div>
 																<div class="title w-full max-w-[110px] text-center"><span class="inline-block mt-[5px]">English</span></div>
 															</div>
 														</li>
 														<li class="mb-[20px] w-1/3 float-left pl-[20px]">
 															<div class="list_inner w-full relative text-center">
 																<div class="myCircle relative float-left" data-value="0.8"></div>
-																<div class="title w-full max-w-[110px] text-center"><span class="inline-block mt-[5px]">Russian</span></div>
+																<div class="title w-full max-w-[110px] text-center"><span class="inline-block mt-[5px]">Swahili</span></div>
 															</div>
 														</li>
 														<li class="mb-[20px] w-1/3 float-left pl-[20px]">
 															<div class="list_inner w-full relative text-center">
 																<div class="myCircle relative float-left" data-value="0.9"></div>
-																<div class="title w-full max-w-[110px] text-center"><span class="inline-block mt-[5px]">Arabic</span></div>
+																<div class="title w-full max-w-[110px] text-center"><span class="inline-block mt-[5px]">Luganda</span></div>
 															</div>
 														</li>
 													</ul>
@@ -874,10 +874,13 @@
 									
 								</ul>
 							</div>
+
+			
 							<div class="right w-1/2 pl-[50px]">
-								<div class="fields w-full h-auto clear-both float-left"
-									<form action="Documentation/modal/contact.php" method="post" class="contact_form" id="contact_form">
-										<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+								<div class="fields w-full h-auto clear-both float-left">
+									<form onsubmit="sendEmail(); reset(); return false; ">
+										<!-- <form   onclick="sendEMail()"   method= "post" class="contact_form" id="contact_form"> -->
+										<!-- <div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div> -->
 										<!-- <div class="empty_notice"><span>Please Fill Required Fields</span></div> -->
 										<div class="first w-full float-left mb-[20px]">
 											<ul class="ml-[-20px] list-none">
@@ -896,8 +899,18 @@
 										<div class="last w-full float-left bg-[#222] rounded-[10px] mb-[20px]">
 											<textarea class="w-full h-[108px] bg-transparent border-none text-main-color resize-none p-[20px] font-poppins" id="message" placeholder="Message"></textarea>
 										</div>
+
+									
 										<div class="edrea_tm_button">
-											<a id="send_message" href="#">Send Message</a>
+											<a id="send_message"  href="#">
+											     
+												<button type="submit" class="btn btn2">Submit</button>
+												
+												</a>
+											<!-- <button type="submit" class="btn btn2">Submit</button> -->
+
+												<!-- <a id="send_message" href="#">Send Message</a> -->
+										
 										</div>
 
 										<!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  -->
@@ -924,6 +937,25 @@
      <!-- /WRAPPER ALL -->
 
     <!-- SCRIPTS -->
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+	<script>
+		function sendEmail() {
+				Email.send({
+					SecureToken:"9336e9a9-b3d6-434e-a3da-d1a294e58c1c",
+					To: 'christokawuma69@gmail.com',
+					From: 'skawuma69@gmail.com',
+					Subject: "New Contact Form Inquiry",
+					Body: "Name: " + document.getElementById("name").value
+					+"<br> Email: " + document.getElementById("email").value
+					+"<br> Message: " + document.getElementById("message").value
+				}).then(
+					message => alert(message)
+				);
+
+			}
+	</script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/circularprogress.js"></script>
     <script src="assets/js/headline.js"></script>
