@@ -1,0 +1,35 @@
+{
+    "remotePath": "/home/u732501951/domains/samuelkawuma.com/public_html",
+    "host": "154.49.247.152",
+    "username": "u732501951.u732501951",
+    "password": "Nabuti@2005",
+    "port": 21,
+    "secure": false,
+    "protocol": "ftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "agent": null,
+    "allow": [],
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": true,
+        "extensionsToInclude": [
+            ".php",
+            ".css",
+            ".html",
+            ".js",
+            ".jpg",
+            ".JPG",
+            ".pdf",
+            ".png"
+        ],
+        "path": ""
+    }
+}
